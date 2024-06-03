@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+// scrollBar
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  // background: -webkit-gradient(linear,left top,left bottom,from(#999),to(#686868));
+  // background: linear-gradient(to bottom,#999,#686868);
+  background: #e3e3e3;
+  border-radius: 10px;
+  &:hover {
+    background: #cccccc; 
+  }
+}
+// ::-webkit-scrollbar-track-piece {
+//   background: #000000;
+// }
+// Стилизация кнопок (стрелочек)
+// ::-webkit-scrollbar-button {
+//   width: 10px;
+//   height: 10px;
+//   background: #ccc;
+//   // Дополнительная стилизация для верхней кнопки
+//   &:single-button:vertical:decrement {
+//     background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMCAxMCI+PHBhdGggZD0iTTUgMGw1IDVoLTJ2NEg0VjVoLTJ6IiBmaWxsPSIjMDAwIi8+PC9zdmc+') no-repeat center center;
+//   }
+//   &:single-button:vertical:increment {
+//     background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMCAxMCI+PHBhdGggZD0iTTAgMGw1IDVoLTJ2NEg0VjVoLTJ6IiBmaWxsPSIjMDAwIi8+PC9zdmc=') no-repeat center center;
+//   }
+//   // Стилизация при наведении на кнопки
+//   &:hover {
+//     background: #999;
+//   }
+// }
+.menu {
+  overflow-y: scroll;
+  max-height: 98vh;
+}
+.info {
+  .last-update {
+    color: #cccccc;
+    position: absolute;
+    font-size: 10px;
+    bottom: 0;
+    right: 1rem;
+  }
+  .common-info {
+    .content__common-info {
+      position: relative;
+      left: 15px;
+    }
+    &::before {
+      content: 'Общая информация';
+      color: #cccccc;
+      font-size: 12px;
+    }
+  }
+  .update-price {
+    .content__update-price {
+      position: relative;
+      left: 15px;
+    }
+    &::before {
+      content: 'Изменение цены';
+      color: #cccccc;
+      font-size: 12px;
+    }
+  }
+  .capital {
+    .content__capital {
+      position: relative;
+      left: 15px;
+    }
+    &::before {
+      content: 'Прочее';
+      color: #cccccc;
+      font-size: 12px;
+    }
+  }
+}
+.drawer {
+  .last-update_drawer__div {
+    position: relative;
+    .last-update_drawer {
+      color: #cccccc;
+      position: absolute;
+      font-size: 10px;
+      top: -15px;
+      right: -15px;
+      user-select: none;
+    }
+  }
+}

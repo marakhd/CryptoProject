@@ -1,0 +1,5 @@
+uvicorn==0.27.1
+fastapi==0.110.0
+aiohttp==3.9.3
+async-lru==2.0.4
+pydantic-settings==2.2.1
