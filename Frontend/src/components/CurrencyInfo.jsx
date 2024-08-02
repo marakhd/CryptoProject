@@ -11,7 +11,7 @@ function CurrencyInfo() {
 
     const fetchCurrency = () => {
         if (id) {
-          axios.get(`http://127.0.0.1:8000/cryptocurrencies/${id}`).then(r => {
+          axios.get(`/api/cryptocurrencies/${id}`).then(r => {
             setCurrency(r.data);
             setLoading(false);
           }).catch(error => {

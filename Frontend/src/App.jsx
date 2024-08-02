@@ -13,7 +13,7 @@ const App = () => {
 
   const fetchCurrencies = () => {
     setLoading(true);
-    axios.get('http://127.0.0.1:8000/cryptocurrencies').then(r => {
+    axios.get('/api/cryptocurrencies').then(r => {
       const currenciesResponse = r.data;
       const menuItems = currenciesResponse.map((currency, index) => ({
         // key: `currency-${index}`,
@@ -40,7 +40,7 @@ const App = () => {
 
   const fetchCurrency = () => {
     if (currencyId) {
-      axios.get(`http://127.0.0.1:8000/cryptocurrencies/${currencyId}`).then(r => {
+      axios.get(`/api/cryptocurrencies/${currencyId}`).then(r => {
         setCurrencyData(r.data)
       }).catch(error => {
         console.error(`Error fetching currency with ID ${currencyId}:`, error);
